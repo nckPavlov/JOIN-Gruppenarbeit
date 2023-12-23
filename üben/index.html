@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>üben</title>
+</head>
+<body onload="init(), initRegister()">
+    
+    <div>
+    <h1>Task Management</h1>
+    <input type="text" placeholder="Aufgabe" id="description">
+    <select placeholder="Kategorie" id="category">
+        <option>Marketing</option>
+        <option>Development</option>
+        <option>Design</option>
+    </select>
+    <button onclick="addTask()">Hinzufügen</button>
+</div>
+
+<div>
+    <h1>Dein Kochbuch</h1>
+    <div>
+        <form  style="display: flex; flex-direction: column; justify-content: flex-start; width: 400px;" onsubmit="addToRecipes()">
+        <input required type="text" placeholder="Titel" id="title">
+        <textarea required placeholder="Bitte beschreibe dein Rezept" id="description"></textarea>
+
+        <button>Hinzufügen</button>
+    </form>
+    </div>
+</div>
+
+<div style="margin-top: 150px;">
+    <form style="display: flex; flex-direction: column;" onsubmit="register(); return false">
+        <input placeholder="email" required type="email" id="email">
+        <input placeholder="password" required type="password" id="password">
+        <button id="registerBtn">Regestrieren</button>
+    </form>
+</div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
